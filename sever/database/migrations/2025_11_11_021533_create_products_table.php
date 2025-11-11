@@ -22,6 +22,7 @@ return new class extends Migration
             $table->enum("productStatus", $productStatus)->default(ProductStatus::removed->value);
             $table->string("product_url")->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -23,6 +23,7 @@ return new class extends Migration
             $table->enum('role', $role)->default(Role::user->value);
             $table->string('avatar_url')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
